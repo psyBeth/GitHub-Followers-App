@@ -84,3 +84,17 @@ searchBtn.addEventListener("click", () => {
         alert("PLease enter your username.")
     }
 });
+
+//! input events always listens to input, whenever user makes a change input event works
+searchInput.addEventListener("input", (e) => {
+    console.log(e.target.value);
+    //   console.log(data);
+    //   console.log(followers.filter((item) => item.login === e.target.value));
+    //   console.log(followers.filter((item) => item.login.includes(e.target.value)));
+    cardsDiv.innerHTML = "";
+    followers
+        .filter((item) =>
+            item.login.toLowerCase().includes(e.target.value.toLowerCase())
+        )
+        .forEach((user) => createElem(user));
+});
