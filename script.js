@@ -1,6 +1,7 @@
 const searchBtn = document.getElementById("button")
 const searchInput = document.querySelector("#searchFollowers")
 const cardsDiv = document.getElementById("cards")
+// console.log("🚀 ~ file: script.js:2 ~ searchBtn:", searchBtn)
 
 //+ https://api.github.com/users/psyBeth/followers
 
