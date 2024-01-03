@@ -98,3 +98,7 @@ searchInput.addEventListener("input", (e) => {
         )
         .forEach((user) => createElem(user));
 });
+
+window.addEventListener("load", () => {
+    searchInput.style.display = "none";
+});
