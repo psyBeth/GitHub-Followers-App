@@ -23,3 +23,53 @@ const getFollowers = async (username) => {
     } catch (error) {}
 }
 console.log(followers);
+
+const createElem = (user) => {
+    // console.log(user);
+    const {login, html_url, avatar_url} = user;
+    //   console.log(user.login);
+    //   console.log(login);
+    const newElem = `
+        <div class="col">
+        <div class="card">
+        <img src="${avatar_url}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${login}</h5>
+            <a href="${html_url}" target="_blank" class="btn btn-dark">View Profile</a>
+        </div>
+        </div>
+    </div>
+    `;
+    cardsDiv.innerHTML += newElem;
+    // let cardCol = document.createElement("div");
+    // cardCol.className = "col";
+    // let cardDiv = document.createElement("div");
+    // cardDiv.className = "card";
+    // let cardImg = document.createElement("img");
+    // cardImg.src = avatar_url;
+    // cardImg.className = "card-img-top";
+    // cardImg.alt = login;
+    // let cardBody = document.createElement("div");
+    // cardBody.className = "card-body";
+    // let cardTitle = document.createElement("h5");
+    // cardTitle.className = "card-title";
+    // cardTitle.innerText = login;
+    // let cardBtn = document.createElement("a");
+    // cardBtn.className = "btn btn-dark";
+    // cardBtn.innerText = "View Profile";
+    // cardBtn.target = "_blank";
+    // cardBtn.setAttribute("href", html_url);
+
+    // cardCol.appendChild(cardDiv);
+    // cardDiv.appendChild(cardImg);
+    // cardDiv.appendChild(cardBody);
+    // cardBody.appendChild(cardTitle);
+    // cardBody.appendChild(cardBtn);
+
+    // cardsDiv.appendChild(cardCol);
+};
+
+// getFollowers("sdasdfgasgfaf");
+// getFollowers("anthonyharold67");
+// getFollowers("esin");
+
