@@ -73,3 +73,14 @@ const createElem = (user) => {
 // getFollowers("anthonyharold67");
 // getFollowers("esin");
 
+searchBtn.addEventListener("click", () => {
+    const value = document.getElementById("searchText").value.trim();
+    //! prevented space the user may put in the bar
+    console.log(value);
+    //   value.trim() && getFollowers(value)
+    if(value) {
+        getFollowers(value);
+    } else {
+        alert("PLease enter your username.")
+    }
+});
