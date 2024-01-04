@@ -8,8 +8,9 @@ const cardsDiv = document.getElementById("cards")
 let followers = [];
 
 const getFollowers = async (username) => {
+    cardsDiv.innerHTML = "";
     try {
-        const res = fetch(`https://api.github.com/users/${username}/followers?per_page=100`);
+        const res = await fetch(`https://api.github.com/users/${username}/followers?per_page=100`);
         if(res.ok){
             const data = await res.json()
             console.log(data);
