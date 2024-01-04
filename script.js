@@ -22,7 +22,9 @@ const getFollowers = async (username) => {
             cardsDiv.innerHTML = `<h1>User not found</h2>`
         }
         //? const data = await res.json()
-    } catch (error) {}
+    } catch (error) {
+        //? don't do anything if any error occurs
+    }
 }
 console.log(followers);
 
